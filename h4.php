@@ -10,24 +10,32 @@
     </head>
     <body>
         <div class="container">
-            <h1>Harjutus 04</h1>
+        <h1>Harjutus 04</h1>
+        <h2>Tingimuslaused</h2>
+            <form action="#" method="get">
+                <label for="jagatav">Jagatav</label><br>
+                <input type="number" name="jagatav" id="jagatav"><br>
+                <label for="jagaja">Jagaja</label><br>
+                <input type="number" name="jagaja" id="jagaja"><br>
+                <input type="submit" class="btn btn-success my-2" value="Jaga"><br>
+        </form>
 
 
         <?php   
-        
-        
-
-
-
-
-
-
-
-        /*  Harjutus 03
+        /*  Harjutus 04
             Thorian Perk
             01.02.2024
         */
         
+            if (!empty($_GET['jagatav']) && !empty($_GET['jagaja'])) {
+                $jagatav = $_GET['jagatav'];
+                $jagaja = $_GET['jagaja'];
+                $a = (($jagatav/$jagaja));
+                echo 'Vastus on '.$a.'<br>';
+                } else { 
+                echo 'Hoiatus, te proovide jagada nulliga!';
+            
+        }
         ?>
         </div>
 
