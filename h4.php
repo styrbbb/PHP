@@ -20,7 +20,6 @@
                 <input type="submit" class="btn btn-success my-2" value="Jaga"><br>
         </form>
 
-
         <?php   
         /*  Harjutus 04
             Thorian Perk
@@ -33,10 +32,14 @@
                 $a = (($jagatav/$jagaja));
                 echo 'Vastus on '.$a.'<br>';
                 } else { 
-                echo 'Hoiatus, te proovide jagada nulliga!';
-            
+                echo 'Hoiatus, te proovide jagada nulliga!';   
         }
         ?>
+
+        
+
+
+
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
