@@ -45,6 +45,7 @@
         </form>
 
         <?php
+        //Rombi pindala arvutamine
         if(!empty($_GET['c'])){
             $c = $_GET['c'];
             $h = $_GET['h'];
