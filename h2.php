@@ -12,7 +12,7 @@
 
         <?php
         /*
-            Harjutus 01
+            Harjutus 02
             Thorian Perk
             01.02.2024
         */
