@@ -100,13 +100,20 @@
             $kylg1 = $_GET['kylg1'];
             $kylg2 = $_GET['kylg2'];
 
-            if ($kylg1 == $kylg2) {
-                echo "<img src="ruut.png">";
-            } else if($kylg1 != $kylg2) {
-                echo "Ristkülik on võimalik";
+            if ($kylg1==$kylg2) {
+                echo 'Ruut';
+                $pilt = "ruut.png";
+            } else if ($kylg1 != $kylg2) {
+                echo 'Ristkülik';
+                $pilt = "ristkylik.png";
             }
 
         }
+
+        echo "<img src='$pilt'>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
 
         ?>
 
