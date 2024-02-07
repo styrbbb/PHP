@@ -110,14 +110,55 @@
 
         }
 
-        echo "<img src='$pilt'>";
+        echo "<img height='100' src='$pilt'>";
         echo "<br>";
         echo "<br>";
         echo "<br>";
 
         ?>
 
+        <h1 class="mb-3"></h1>
+        <h2>Juubel</h2>
+        <form action="#" method="get">
+            <label for="synniaasta">Sisesta sünniaasta</label><br>
+            <input type="number" name="synniaasta" id="synniaasta"><br>
+            <input type="submit" class="btn btn-success my-2" value="Arvuta"><br>
+        </form>
 
+        <?php 
+        if (!empty($_GET["synniaasta"])) {
+            $synniaasta = $_GET['synniaasta'];
+            
+            if ($synniaasta>30) {
+                echo 'On juubel';
+            } else {
+                echo 'Ei ole juubel';
+            }
+        }
+        
+        ?>
+        <h1 class="mb-3"></h1>
+        <h2>Hinne (switch)</h2>
+        <form action="#" method="get">
+            <label for="punktid">Sisesta KT punktid</label><br>
+            <input type="number" name="punktid" id="punktid"><br>
+            <input type="submit" class="btn btn-success my-2" value="Arvuta"><br>
+        </form>
+
+        <?php 
+        if (!empty($_GET["punktid"])) {
+            $punktid = $_GET['punktid'];
+
+            if($punktid >= 10){
+                echo 'SUPER';
+                } else if ($punktid >= 5) {
+                echo 'TEHTUD';
+                } else if ($punktid <= 5) {
+                echo 'KASIN';  
+            }     
+        }
+
+        ?>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
