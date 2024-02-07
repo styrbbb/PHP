@@ -23,7 +23,7 @@
         <?php   
         /*  Harjutus 04
             Thorian Perk
-            01.02.2024
+            06.02.2024
         */
         
             if (!empty($_GET['jagatav']) && !empty($_GET['jagaja'])) {
