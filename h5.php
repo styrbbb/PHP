@@ -51,7 +51,7 @@
             "Suzuki","Nissan","Ford","Acura","Volkswagen","Lincoln","Mazda","BMW","Mercury","Mitsubishi","Ram","Audi","Kia","Pontiac","Toyota","Acura","Toyota","Toyota",
             "Chevrolet","Oldsmobile","Acura","Pontiac","Lexus","Chevrolet","Cadillac","GMC","Jeep","Audi","Acura","Acura","Honda","Dodge","Hummer","Chevrolet","BMW",
             "Honda","Lincoln","Hummer","Acura","Buick","BMW","Chevrolet","Cadillac","BMW","Pontiac","Audi","Hummer","Suzuki","Mitsubishi","Jeep","Buick","Ford");
-            $vin = array("1GKS1GKC8FR966658", "1FTEW1C87AK375821", "1G4GF5E30DF760067", "1FTEW1CW9AF114701", "WAUGGAFC8CN433989", "3G5DA03E83S704506", "4JGDA2EB0DA207570", 
+            $vinid = array("1GKS1GKC8FR966658", "1FTEW1C87AK375821", "1G4GF5E30DF760067", "1FTEW1CW9AF114701", "WAUGGAFC8CN433989", "3G5DA03E83S704506", "4JGDA2EB0DA207570", 
             "1FTEW1E88AK070552", "SAJWA0F77F8732763", "JHMFA3F21BS660717", "JTHBP5C29C5750730", "WA1LFAFP9DA963060", "3D7TT2CT6BG521976", "WVWN7EE961049", 
             "2C3CA5CG3BH341234", "YV4952CFXC162587", "KNALN4D71F5805172", "JN1CV6EK7BM903692", "5FRYD3H84EB186765", "WAUL64B83N441878", "WDDGF4HBXCF845665", 
             "WAUKF78E45A133973", "JN1BY0AR2AM022612", "WA1EY74L69D931520", "3GYFNGEYXBS290465", "1D7CW2GK4AS059336", "JN8AZ1FY5EW087447", "WAUBF78E57A343355", 
@@ -71,17 +71,73 @@
             echo "<b>Autode arv:</b><br>";  
             echo count($autod);
             echo "<br>";
-            echo "<br>";
-            if (count($autod) == count($vin)) {
+            if (count($autod) == count($vinid)) {
                 echo "Autod ja vin'id on ühepikkused.";
                 } else {
                 echo "Autod ja vin'id on erinevad."; 
             }
-            echo count();
+            echo"<br>";
+            echo"<br>";
+            echo "<b>Toyotad ja Audid</b><br>"; 
+            $Toyota = 0;
+            $Audi = 0;
 
-        
+            foreach ($autod as $auto) {
+                if ($auto === 'Toyota') {
+                    $Toyota++;
+                } elseif ($auto === 'Audi') {
+                    $Audi++;
+                }
+            }
+            echo "Toyotad: $Toyota\n";
+            echo "Audid: $Audi\n";
+
+            echo "<br>";
+            echo "<br>";
+            echo "<b>VIN koodid</b><br>"; 
+            $vine = 0;
+            foreach ($vinid as $vin) {
+                if (strlen($vin) <17) {
+                    $vine++;
+                }
+            }
+            echo "Vigased vin koodid: $vine";
+        ?>
+        <h1 class="mb-3"></h1>
+        <h2>Palkade keskmised</h2>
+        <?php 
+            $palgad = array(1220,1213,1295,1312,1298,1354,1296,1286,1292,1327,1369,1455);
+            $keskmine = array_sum($palgad)/count($palgad);
+            echo "Palkade keskmised 2018 aastal olid: $keskmine €";
         ?>
 
+        <h1 class="mb-3"></h1>
+        <h2>Firmad</h2>
+        <?php 
+            $firmad = array("Kimia","Mynte","Voomm","Twiyo","Layo","Talane","Gigashots","Tagchat","Quaxo","Voonyx","Kwilith","Edgepulse","Eidel","Eadel","Jaloo","Oyope","Jamia");
+            sort($firmad);
+            unset($firmad[1]); //[0] > Kimia , [1] > Mynte , [2] > Voomm jne
+            echo "<b>Korrastatud järjekorras</b><br>";
+            foreach($firmad as $firma) {
+                echo "$firma <br>";
+            }
+            echo "<br>";
+        ?>
+
+        <h1 class="mb-3"></h1>
+        <h2>Riigid</h2>
+        <?php 
+            $riigid = array("Indonesia","Canada","Kyrgyzstan","Germany","Philippines",
+            "Philippines","Canada","Philippines","South Sudan","Brazil",
+            "Democratic Republic of the Congo","Indonesia","Syria","Sweden",
+            "Philippines","Russia","China","Japan","Brazil","Sweden","Mexico","France",
+            "Kazakhstan","Cuba","Portugal","Czech Republic");
+            
+
+
+
+
+        ?>
 
         </div>
 
