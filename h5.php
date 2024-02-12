@@ -132,11 +132,60 @@
             "Democratic Republic of the Congo","Indonesia","Syria","Sweden",
             "Philippines","Russia","China","Japan","Brazil","Sweden","Mexico","France",
             "Kazakhstan","Cuba","Portugal","Czech Republic");
-            
 
+            $max_len = max(array_map('strlen', $riigid));
+            echo "Kõige pikema riigi nime märkide arv on: $max_len";
+        ?>
+        <h1 class="mb-3"></h1>
+        <h2>Hiina nimed</h2>
+        <?php 
+        $hnimed = array("瀚聪","月松","雨萌","展博","雪丽","哲恒","慧妍","博裕","宸瑜","奕漳",
+        "思宏","伟菘","彦歆","睿杰","尹智","琪煜","惠茜","晓晴","志宸","博豪",
+        "璟雯","崇杉","俊誉","军卿","辰华","娅楠","志宸","欣妍","明美");
+        ksort($hnimed);
+        echo "<b>Kasvavas järjekorras</b><br>";
+        foreach($hnimed as $hnimi) {
+            echo "$hnimi<br>";
+        }
+            echo "<br>";
+            echo "<b>Esimene ja viimane nimi</b><br>";
+            echo "Esimene nimi: $hnimed[0]";
+            echo "<br>";
+            echo "Viimane Nimi: $hnimed[28]";
+        ?>     
+        <h1 class="mb-3"></h1>
+        <h2>Google</h2>   
+        <form action="#" method="get">
+                <label for="onimed">Sisesta nimi..</label><br>    
+                <input type="floatingInput" name="onimed" id="onimed"><br>
+                <input type="submit" class="btn btn-success my-2" value="Otsi"><br>
+        </form>
+        <?php
+        $onimed = array("Feake","Bradwell","Dreger","Bloggett","Lambole","Daish","Lippiett","
+        Blackie","Stollenbeck","Houseago","Dugall","Sprowson","Kitley","Mcenamin",
+        "Allchin","Doghartie","Brierly","Pirrone","Fairnie","Seal","Scoffins",
+        "Galer","Matevosian","DeBlase","Cubbin","Izzett","Ebi","Clohisey",
+        "Prater","Probart","Samwaye","Concannon","MacLure","Eliet","Kundt","Reyes");
 
+        if (!empty($_GET['onimed'])) {
+            $onimed = $_GET['onimed'];
+            if (array_search('Feake', $onimed)) {
+                echo "'$onimed' on massiivis.";
+            }  else {
+                echo "'$onimed' ei ole massiivis.";
+            }
 
-
+        }
+        ?>   
+        <h1 class="mb-3"></h1>
+        <h2>Pildid</h2> 
+        <?php 
+        $pildid = array("prentice.jpg","freeland.jpg","peterus.jpg","devlin.jpg","gabriel.jpg","pete.jpg");
+        foreach($pildid as $pilt) {
+            echo "$pilt <br>";
+        } 
+        
+        
         ?>
 
         </div>
