@@ -179,11 +179,25 @@
         ?>   
         <h1 class="mb-3"></h1>
         <h2>Pildid</h2> 
-        <?php 
-        $pildid = array("prentice.jpg","freeland.jpg","peterus.jpg","devlin.jpg","gabriel.jpg","pete.jpg");
-        foreach($pildid as $pilt) {
-            echo "$pilt <br>";
-        } 
+        <?php
+        $pildid = array('prentice.jpg','freeland.jpg','peterus.jpg','devlin.jpg','gabriel.jpg','pete.jpg');
+        $index = 2;
+
+        echo "<br>";
+        echo "<b>Kuva kõik pildid massiivist</b><br>";
+        foreach ($pildid as $pilt) {
+            echo '<img src="'.$pilt.'" alt="..." height="150" width="150">';
+        }
+        echo "<br>";
+        echo "<br>";
+        echo "<b>Kuvab massiivist kolmanda pildi</b><br>";
+        if (isset($pildid[$index])) {
+            $pilt = $pildid[$index];
+            echo '<img src="'.$pilt.'" alt="..." height="150" width="150">';
+        } else {
+            echo 'Invalid index';
+        }
+
         
         
         ?>
