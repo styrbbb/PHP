@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="et">
     <head>
-        <title>Harjutus 06</title>
+        <title>Harjutus 07</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
@@ -10,94 +10,64 @@
     </head>
     <body>
         <div class="container">
-        <h2>Genereeri</h2>
+        <h2>Tervitus</h2>
         <?php   
         /*  Harjutus 06
             Thorian Perk
-            14.02.2024
+            19.02.2024
         */
-        echo "<b>Arvud 1-100</b><br>";
-        for($arv0=1;$arv0<=100;$arv0++){
-            echo $arv0."\n"; 
-        }
-        echo "<br>";
-        echo "<br>";
-        echo "<b>Arvud reavahetuses</b><br>";
-        for ($arv1 = 0; $arv1 <= 100; $arv1+=10) {
-            echo $arv1. '<br>';
-        }
-        echo "<br>";
-        echo "<b>Punktid arvu järel</b><br>";
-        for ($arv2 = 1; $arv2 <= 100; $arv2++) {
-            echo $arv2. ". \n";
-        } 
+        function tervitab(){
+            return "Tere päikesekesekene"; 
+            }
+            
+            echo tervitab();
         ?>
-        <h1 class="mb-3"></h1>
-        <h2>Read</h2>
-        <?php
-        echo "<b>Horisontaalne</b><br>";
-        for($rida=1; $rida<=1; $rida++){ 
-            for($veerg=1; $veerg<=10; $veerg++){ 
-                    echo "* \n";	
-                }
-            echo '<br>';
+        <h1 class="mb-4"></h1>
+        <h2>Uudiskiri</h2>
+        <?php 
+        function uudiskiri() {
+            echo '<form class="row g-3 p-4">';
+            echo '  <div class="col-auto">';
+            echo '      <label for="email" class="visually-hidden">Email</label>';
+            echo '      <input type="email" class="form-control" id="email" placeholder="Email">';
+            echo '  </div>';
+            echo '  <div class="col-auto">';
+            echo '      <button type="submit" class="btn btn-primary mb-3">Liitu uudiskirjaga</button>';
+            echo '  </div>';
+            echo '</form>';
         }
-        echo "<br>";
-        echo "<b>Vertikaalne</b><br>";
-        for($rida=1; $rida<=10; $rida++){ 
-            echo '*<br>';
-        }
+        echo uudiskiri();
         ?>
-        <h1 class="mb-3"></h1>
-        <h2>Ruut</h2>
-        <form action="#" method="get">
-            <label for="kylg">Sisesta külg</label><br>
-            <input type="number" name="kylg" id="kylg"><br>
-            <input type="submit" class="btn btn-success my-2" value="Arvuta"><br>
-        </form>
+        <h1 class="mb-4"></h1>
+        <h2>Kasutajanimi ja email</h2>
         <?php
-        if(isset($_GET['kylg'])) {
-            $kylg = $_GET['kylg'];
+        function kasutajanimi() {
+            if (!empty($_GET['nimi'])) {
+                $nimi = $_GET['nimi'];
+            }
 
-            if(is_numeric($kylg) && $kylg > 0 && $kylg == round($kylg)) {
-                for($i = 0; $i < $kylg; $i++) {
-                    for($j = 0; $j < $kylg; $j++) {
-                        echo '* &nbsp;&nbsp;&nbsp;';
-                    }
-                    echo "<br>";
-                }
-            } else {
-                echo "Sisestus puudub.";
-            }
+            //Väikesed tähed
+            $vaike_nimi = strtolower($nimi);
+
+            //Genereri email
+            $email = $vaike_nimi . "@hkhk.edu.ee";
+
+            //Genereeri 7 kohaline kood kood
+            $kood = substr(str_shuffle("abcdefghijklmnopqrstuvwxyz0123456789"), 0, 7);
+
+            echo '<form action="#" method="get">';
+            echo '  <label for="nimi">Sisesta kasutajanimi</label><br>';
+            echo '  <input type="floatingInput" name="nimi" id="nimi"><br>';
+            echo '  <label for="email">Email</label><br>';
+            echo '  <input type="text" class="form-control" id="email" value="' . $email . '" readonly>';
+            echo '  <label for="kood">Genereeritud kood</label><br>';
+            echo '  <input type="text" class="form-control" id="kood" value="' . $kood . '" readonly><br>';
+            echo '  <button type="submit" class="btn btn-primary my-2">Submit</button>';
+            echo '</form>';
         }
+        echo kasutajanimi();    
         ?>
-        <h1 class="mb-3"></h1>
-        <h2>Kahanev</h2>
-        <?php 
-        echo "<br>";
-        $knm = 10;
-        while($knm>0) {
-          echo $knm.'<br>';
-          $knm--;
-        }
-        ?>
-        <h1 class="mb-3"></h1>
-        <h2>Kolmega jagunevad</h2>       
-        <?php 
-        for ($i = 1; $i <= 100; $i++) {
-            if ($i % 3 === 0) {
-                echo $i . " ";
-            }
-        }
-        ?>
-        <h1 class="mb-3"></h1>
-        <h2>Massivid ja tsüklid</h2>
-        <?php 
-        $poisid = array('Juhan','Karl','Uku','Joosep','Peeter');
-        $tydrukud = array('Mari','Kati','Susan','Miku','Helen');
-        ?>
-    
-        
+
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
