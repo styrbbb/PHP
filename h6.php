@@ -84,10 +84,20 @@
         <h1 class="mb-3"></h1>
         <h2>Kolmega jagunevad</h2>       
         <?php 
-        
-        
+        for ($i = 1; $i <= 100; $i++) {
+            if ($i % 3 === 0) {
+                echo $i . " ";
+            }
+        }
         ?>
-
+        <h1 class="mb-3"></h1>
+        <h2>Massivid ja tsüklid</h2>
+        <?php 
+        $poisid = array('Juhan','Karl','Uku','Joosep','Peeter');
+        $tydrukud = array('Mari','Kati','Susan','Miku','Helen');
+        ?>
+    
+        
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
