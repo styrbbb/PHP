@@ -12,7 +12,7 @@
         <div class="container">
         <h2>Tervitus</h2>
         <?php   
-        /*  Harjutus 06
+        /*  Harjutus 07
             Thorian Perk
             19.02.2024
         */
