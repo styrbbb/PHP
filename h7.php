@@ -42,6 +42,7 @@
         <h2>Kasutajanimi ja email</h2>
         <?php
         function kasutajanimi() {
+            $nimi = "";
             if (!empty($_GET['nimi'])) {
                 $nimi = $_GET['nimi'];
             }
@@ -176,33 +177,24 @@
         <h1 class="mb-4"></h1>
         <h2>Head mõtted</h2>
         <?php 
-        function headmotted() {
-            // Alusmassiiv.
-            $alus = array("koer", "kass", "auto", "lill");
-        
-            // Öeldismassiiv.
-            $oeldis = array("jookseb", "magab", "sõidab", "õitseb");
-        
-            // Sihitismassiiv.
-            $sihitis = array("pargis", "majas", "tänaval", "aias");
-        
-            // Tagastame kõik massiivid.
-            return array("alus" => $alus, "öeldis" => $oeldis, "sihitis" => $sihitis);
+        function headmotted($alus, $öeldis, $sihitis) {
+            $alus2 = $alus[array_rand($alus)];
+            $oeldis2 = $öeldis[array_rand($öeldis)];
+            $sihitis2 = $sihitis[array_rand($sihitis)];
+
+            $lause = "$alus2 $oeldis2 $sihitis2.";
+
+            return $lause;
         }
-        
-        //Näide: saame massiivid.
-        $yhepikkune = headmotted();
-        
-        //Väljastab tulemused.
-        echo "Alusmassiiv: ";
-        print_r($yhepikkune["alus"]);
-        
-        echo "Öeldismassiiv: ";
-        print_r($yhepikkune["öeldis"]);
-        
-        echo "Sihitismassiiv: ";
-        print_r($yhepikkune["sihitis"]);
-        
+
+        //Massiiv kolmest alus, õeldis ja sihitis sõnadest.
+        $alus = array("Kass", "Koer", "Lind");
+        $öeldis = array("jookseb", "mängib", "laulab");
+        $sihitis = array("aias", "metsas", "toas");
+
+        $lause = headmotted($alus, $öeldis, $sihitis);
+
+        echo $lause;
         ?>    
 
         </div>
