@@ -14,11 +14,14 @@
         <?php   
         /*  Harjutus 08
             Thorian Perk
-            22.02.2024
+            10.03.2024
         */
-        $sp = mktime(0,0,0,03,20,2023);
-        echo date('d.m.Y G:i', $sp);
-        
+        $sd = strtotime("20.03.2023 17:31");
+
+        $date = date("d.m.Y H:i", $sd);
+
+        //Väljastamine
+        echo $date;
 
         ?>
         <h1 class="mb-4"></h1>
