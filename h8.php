@@ -20,16 +20,36 @@
 
         $date = date("d.m.Y H:i", $sd);
 
-        //Väljastamine
+        //Väljastab tulemuse
         echo $date;
 
         ?>
         <h1 class="mb-4"></h1>
-        <h2></h2>
+        <h2>Kasutaja vanus</h2>
+        <?php 
+        function kasutaja_vanus($sunniaasta) {
+            $praegune_aasta = date("Y");
+            
+            $vanus = $praegune_aasta - $sunniaasta;
+
+            return $vanus;
+        }
+
+        $sunniaasta = 2006; // Muutke seda vastavalt kasutaja sünniaastale
+
+        $vanus = kasutaja_vanus($sunniaasta);
+
+        //Väljastab tulemuse
+        echo "Kasutaja vanus on: ".$vanus." aastat";
+        ?>
+        <h1 class="mb-4"></h1>
+        <h2>Kooliasta lõpp</h2>
         <?php 
         
         ?>
+
         </div>
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     </body>
