@@ -35,7 +35,7 @@
             return $vanus;
         }
 
-        $sunniaasta = 2006; // Muutke seda vastavalt kasutaja sünniaastale
+        $sunniaasta = 2006; //Muutke seda vastavalt kasutaja sünniaastale
 
         $vanus = kasutaja_vanus($sunniaasta);
 
@@ -43,10 +43,28 @@
         echo "Kasutaja vanus on: ".$vanus." aastat";
         ?>
         <h1 class="mb-4"></h1>
-        <h2>Kooliasta lõpp</h2>
+        <h2>Kooliaasta lõpp</h2>
         <?php 
-        
+        //Määrab tänase kuupäeva
+        $today = date("Y-m-d");
+
+        $yearStart = date("Y") . "-09-01";
+
+        //Määra kooliaasta lõppkuupäev (juuni järgmise aasta)
+        if(date("m") > 8) { //Kui oleme juba septembrist edasi, siis lõpp on järgmise aasta juunis
+            $yearEnd = (date("Y") + 1) . "-06-30";
+        } else { //Kui oleme enne septembrit, siis lõpp on käesoleva aasta juunis
+            $yearEnd = date("Y") . "-06-30";
+        }
+
+        //Arvuta päevade arvu
+        $daysLeft = round((strtotime($yearEnd) - strtotime($today)) / (60 * 60 * 24));
+
+        //Väljastab tulemuse
+        echo "Kooliaasta lõpuni on jäänud $daysLeft päeva!";
         ?>
+        <h1 class="mb-4"></h1>
+        <h2>Aastaajad</h2>
 
         </div>
 
