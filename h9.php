@@ -12,59 +12,12 @@
         <div class="container">
         <h2>Kuupäev ja kellaaeg</h2>
         <?php   
-        /*  Harjutus 08
+        /*  Harjutus 09
             Thorian Perk
-            10.03.2024
+            13.03.2024
         */
-        $sd = strtotime("20.03.2023 17:31");
-
-        $date = date("d.m.Y H:i", $sd);
-
-        //Väljastab tulemuse
-        echo $date;
-
         ?>
-        <h1 class="mb-4"></h1>
-        <h2>Kasutaja vanus</h2>
-        <?php 
-        function kasutaja_vanus($sunniaasta) {
-            $praegune_aasta = date("Y");
-            
-            $vanus = $praegune_aasta - $sunniaasta;
-
-            return $vanus;
-        }
-
-        $sunniaasta = 2006; //Muutke seda vastavalt kasutaja sünniaastale
-
-        $vanus = kasutaja_vanus($sunniaasta);
-
-        //Väljastab tulemuse
-        echo "Kasutaja vanus on: ".$vanus." aastat";
-        ?>
-        <h1 class="mb-4"></h1>
-        <h2>Kooliaasta lõpp</h2>
-        <?php 
-        //Määrab tänase kuupäeva
-        $today = date("Y-m-d");
-
-        $yearStart = date("Y") . "-09-01";
-
-        //Määra kooliaasta lõppkuupäev (juuni järgmise aasta)
-        if(date("m") > 8) { //Kui oleme juba septembrist edasi, siis lõpp on järgmise aasta juunis
-            $yearEnd = (date("Y") + 1) . "-06-30";
-        } else { //Kui oleme enne septembrit, siis lõpp on käesoleva aasta juunis
-            $yearEnd = date("Y") . "-06-30";
-        }
-
-        //Arvuta päevade arvu
-        $daysLeft = round((strtotime($yearEnd) - strtotime($today)) / (60 * 60 * 24));
-
-        //Väljastab tulemuse
-        echo "Kooliaasta lõpuni on jäänud $daysLeft päeva!";
-        ?>
-        <h1 class="mb-4"></h1>
-        <h2>Aastaajad</h2>
+        
 
         </div>
 
