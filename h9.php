@@ -19,78 +19,67 @@
             13.03.2024
         */
 
-        $nimi = "";
-        if (!empty($_GET['nimi'])) {
-            $nimi = $_GET['nimi'];
-        }
-
-        $valjund = $nimi;
-
-        echo '<form class="row g-3 p-4">';
-        echo '  <div class="col-auto">';
-        echo '      <label for="nimi">Sisesta nimi</label><br>';
-        echo '      <input type="floatingInput" class="form-control" name="nimi" id="nimi"><br>';
-        echo '      <label for="valjund">Väljund</label><br>';
-        echo ucwords(strtolower('<input type="text" class="form-control" id="valjund" value="Tere, '.$valjund.'" readonly><br>'));
-        echo '      <button type="submit" class="btn btn-primary my-2">Submit</button>';
-        echo '  </div>';
-        echo '</form>';
+        $nimi = 'mARiO';
+	
+        echo ucwords(strtolower('Tere, '. $nimi));
         ?>
 
         <h1 class="mb-4"></h1>
         <h2>hj .2</h2>
         <?php   
-        /*
-        function convertToAcronym($nimi1) {
-            $std = explode(' ', strtoupper($nimi1));
-            $acronyym = '';
-
-            // Käib läbi iga sõna ja võtab esimese tähe
-            foreach ($std as $st) {
-                $acronyym .= substr($st, 0, 1) . '.';
-            }
-
-            return $acronyym;
-        }
-        $nimi1 = "";
-        if (!empty($_GET['nimi1'])) {
-            $nimi1 = $_GET['nimi1'];
-        }
-
-        $valjund1 = $nimi1;
-
-        echo '<form class="row g-3 p-4">';
-        echo '  <div class="col-auto">';
-        echo '      <label for="nimi">Sisesta nimi</label><br>';
-        echo '      <input type="floatingInput" class="form-control" name="nimi1" id="nimi1"><br>';
-        echo '      <label for="valjund">Väljund</label><br>';
-        echo convertToAcronym('<input type="text" class="form-control" id="valjund1" value="'.$valjund1.'"readonly><br>');
-        echo '      <button type="submit" class="btn btn-primary my-2">Submit</button>';
-        echo '  </div>';
-        echo '</form>';
-        */
-        function convertToAcronym($text) {
+        function tykeldamine($tekst) {
             // Jagab teksti tähtede järgi
-            $letters = str_split($text);
-            $acronym = '';
+            $bbb = str_split($tekst);
+            $acronyym = '';
         
             // Loob akronüümi iga tähe järgi
-            foreach ($letters as $letter) {
-                $acronym .= strtoupper($letter) . '.';
+            foreach ($bbb as $bb) {
+                $acronyym .= strtoupper($bb) . '.';
             }
         
             // Eemaldab viimase punkti
-            $acronym = rtrim($acronym, '.');
+            $acronyym = rtrim($acronyym, '.');
         
-            return $acronym;
+            return $acronyym;
         }
         
-        // Testimiseks
-        $text = "stalker";
-        echo convertToAcronym($text); // väljund: S.T.A.L.K.E.R
+        //Väljastamine
+        $tekst = "stalker";
+        echo tykeldamine($tekst);
         ?>
 
+        <h1 class="mb-4"></h1>
+        <h2>hj .3</h2>
+        <?php 
+        $tekst1 = 'Sa oled täielik noob';
+        $tekst2 = 'Sa kuradi ära';
+        $otsi = array('noob', 'kuradi');
+        $asenda = array('***', '*****');
+        echo str_replace($otsi, $asenda, $tekst1."</br>");
+        echo str_replace($otsi, $asenda, $tekst2);
+        ?>
 
+        <h1 class="mb-4"></h1>
+        <h2>hj .4</h2>
+        <?php 
+        function loo_email($enimi, $pnimi) {
+            // Eemaldame tühikud ja teisendame täpitähed vastavalt nõuetele
+            $enimi = str_replace(['ä', 'ö', 'ü', 'õ'], ['a', 'o', 'y', 'o'], mb_strtolower(str_replace(' ', '', $enimi)));
+            $pnimi = str_replace(['ä', 'ö', 'ü', 'õ'], ['a', 'o', 'y', 'o'], mb_strtolower(str_replace(' ', '', $pnimi)));
+        
+            // Koostame emaili aadressi
+            $email = $enimi.'.' .$pnimi.'@hkhk.edu.ee';
+            
+            return $email;
+        }
+        
+        // Näide kasutamisest:
+        $enimi = 'Ülle';
+        $pnimi = 'Doos';
+        
+        $email = loo_email($enimi, $pnimi);
+        echo "Kasutaja email: " . $email;
+        ?>
         </div>
 
 
