@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="et">
     <head>
-        <title>Harjutus 09</title>
+        <title>Harjutus 10</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
@@ -12,16 +12,13 @@
         <div class="container">
         <h1>Tekstifunktsioonid</h1>
         <h1 class="mb-4"></h1>
-        <h2>hj .1</h2>
+        <h2></h2>
         <?php   
         /*  Harjutus 10
             Thorian Perk
             14.03.2024
         */
 
-        $nimi = 'mARiO';
-	
-        echo ucwords(strtolower('Tere, '. $nimi));
         ?>
 
         <h1 class="mb-4"></h1>
