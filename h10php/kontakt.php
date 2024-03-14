@@ -10,20 +10,11 @@
     </head>
     <body>
         <div class="container">
-        <h1>Tekstifunktsioonid</h1>
+        <h1>Kontakt</h1>
         <h1 class="mb-4"></h1>
-        <h2></h2>
-        <?php   
-        /*  Harjutus 10
-            Thorian Perk
-            14.03.2024
-        */
-
-        ?>
-
-        <h1 class="mb-4"></h1>
-        <h2></h2>
-        </div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus magnam cupiditate, quidem molestias labore veniam voluptatibus, ea corporis quibusdam quam quia perspiciatis neque delectus? Recusandae alias libero inventore minus porro.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus magnam cupiditate, quidem molestias labore veniam voluptatibus, ea corporis quibusdam quam quia perspiciatis neque delectus? Recusandae alias libero inventore minus porro.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus magnam cupiditate, quidem molestias labore veniam voluptatibus, ea corporis quibusdam quam quia perspiciatis neque delectus? Recusandae alias libero inventore minus porro.</p>
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>

@@ -10,7 +10,6 @@
     </head>
     <body>
         <div class="container">
-        <div class="container">
         <h1>Portfoolio</h1>
         <h1 class="mb-4"></h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus magnam cupiditate, quidem molestias labore veniam voluptatibus, ea corporis quibusdam quam quia perspiciatis neque delectus? Recusandae alias libero inventore minus porro.</p>
