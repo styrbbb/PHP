@@ -10,17 +10,30 @@
     </head>
     <body>
         <div class="container">
-            <menu>
-                <a href="index.php">Avaleht</a> |
-                <a href="index.php?leht=portfoolio">Portfoolio</a> |
-                <a href="index.php?leht=kontakt">Kontakt</a> |
-                <a href="index.php?leht=epood">E-pood</a> |
-            </menu>
+        <menu>
+            <a href="index.php">Avaleht</a> |
+            <a href="index.php?leht=portfoolio">Portfoolio</a> |
+            <a href="index.php?leht=kontakt">Kontakt</a> |
+            <a href="index.php?leht=epood">E-pood</a> |
+
+        </menu>
+        <?php
+            if(!empty($_GET['leht'])){
+                $leht = htmlspecialchars($_GET['leht']);
+                if(is_file($leht.'.php')){
+                    include($leht.'.php');
+                } else {
+                    echo 'Valitud lehte ei eksisteeri!';
+                }
+            } else {
+        ?>
         <h1>Avaleht</h1>
-        <h1 class="mb-4"></h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus magnam cupiditate, quidem molestias labore veniam voluptatibus, ea corporis quibusdam quam quia perspiciatis neque delectus? Recusandae alias libero inventore minus porro.</p>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus magnam cupiditate, quidem molestias labore veniam voluptatibus, ea corporis quibusdam quam quia perspiciatis neque delectus? Recusandae alias libero inventore minus porro.</p>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus magnam cupiditate, quidem molestias labore veniam voluptatibus, ea corporis quibusdam quam quia perspiciatis neque delectus? Recusandae alias libero inventore minus porro.</p>
+        <?php 
+            } 
+         ?>
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
