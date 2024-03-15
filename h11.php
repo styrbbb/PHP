@@ -10,9 +10,9 @@
     </head>
     <body>
         <div class="container">
-        <h1>Tekstifunktsioonid</h1>
+        <h1>Töö tekstifailidega</h1>
         <h1 class="mb-4"></h1>
-        <h2>hj .1</h2>
+        <h2>puudub</h2>
         <?php   
         /*  Harjutus 11
             Thorian Perk
