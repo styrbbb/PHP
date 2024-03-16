@@ -29,14 +29,17 @@
         $jrk = 1;
         while(!feof($minu_csv)){
             $rida = fgetcsv($minu_csv, filesize($allikas),';');
-            $arv = count($rida); //rea väljade arv
-            echo $jrk.'. '; //järjekorra number
-            $jrk++;
-            for($i = 0; $i<$arv; $i++){
-                echo $rida[$i].' ';	
-            }
-            echo '<br>';
             
+            // Check if $rida is an array before counting its elements
+            if (is_array($rida)) {
+                $arv = count($rida); //rea väljade arv
+                echo $jrk.'. '; //järjekorra number
+                $jrk++;
+                for($i = 0; $i<$arv; $i++){
+                    echo $rida[$i].' ';	
+                }
+                echo '<br>';
+            }
         }
         fclose($minu_csv);
         ?>
