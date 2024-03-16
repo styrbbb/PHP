@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="et">
     <head>
-        <title>Harjutus 11</title>
+        <title>Harjutus 12</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
@@ -10,14 +10,35 @@
     </head>
     <body>
         <div class="container">
-        <h1>Töö tekstifailidega</h1>
+        <h1>CSV</h1>
         <h1 class="mb-4"></h1>
-        <h2>puudub</h2>
+        <h2>Auto sõiduaeg</h2>
         <?php   
-        /*  Harjutus 11
+        /*  Harjutus 12
             Thorian Perk
-            15.03.2024
+            16.03.2024
         */
+        
+
+        ?>
+        <h1 class="mb-4"></h1>
+        <h2>Töötajad</h2>
+        <?php   
+        $allikas = 'tootajad.csv';
+        $minu_csv = fopen($allikas, 'r') or die('Ei leia faili!');
+        $jrk = 1;
+        while(!feof($minu_csv)){
+            $rida = fgetcsv($minu_csv, filesize($allikas),';');
+            $arv = count($rida); //rea väljade arv
+            echo $jrk.'. '; //järjekorra number
+            $jrk++;
+            for($i = 0; $i<$arv; $i++){
+                echo $rida[$i].' ';	
+            }
+            echo '<br>';
+            
+        }
+        fclose($minu_csv);
         ?>
         </div>
 
