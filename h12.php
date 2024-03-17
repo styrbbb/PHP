@@ -40,6 +40,8 @@
                 }
                 echo '<br>';
             }
+
+            
         }
         fclose($minu_csv);
         ?>
