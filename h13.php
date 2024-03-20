@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="et">
     <head>
-        <title>Harjutus 12</title>
+        <title>Harjutus 13</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
@@ -10,44 +10,43 @@
     </head>
     <body>
         <div class="container">
-        <h1>CSV</h1>
+        <h1>Töö kataloogidega</h1>
         <h1 class="mb-4"></h1>
-        <h2>Auto sõiduaeg</h2>
+        <h2></h2>
         <?php   
-        /*  Harjutus 12
+        /*  Harjutus 13
             Thorian Perk
-            16.03.2024
+            17.03.2024
         */
         
-
-        ?>
-        <h1 class="mb-4"></h1>
-        <h2>Töötajad</h2>
-        <?php   
-        $allikas = 'tootajad.csv';
-        $minu_csv = fopen($allikas, 'r') or die('Ei leia faili!');
-        $jrk = 1;
-        while(!feof($minu_csv)){
-            $rida = fgetcsv($minu_csv, filesize($allikas),';');
+        if(!empty($_FILES['minu_fail']['name'])){
+            $sinu_faili_nimi = $_FILES['minu_fail']['name'];
+            $ajutine_fail= $_FILES['minu_fail']['tmp_name'];
             
-            // Check if $rida is an array before counting its elements
-            if (is_array($rida)) {
-                $arv = count($rida); //rea väljade arv
-                echo $jrk.'. '; //järjekorra number
-                $jrk++;
-                for($i = 0; $i<$arv; $i++){
-                    echo $rida[$i].' ';	
+            $faili_suurus = $_FILES['minu_fail']['size'];	//faili suurus
+            $max_suurus = 1048576;							//seame lubatud failisuuruse piiri
+            
+            $faili_tyyp = $_FILES['minu_fail']['type'];		//faili MIME tüüp
+            
+            if($faili_suurus <= $max_suurus && $faili_tyyp=='text/plain'){
+                $kataloog = 'failid';
+                if(move_uploaded_file($ajutine_fail, $kataloog.'/'.$sinu_faili_nimi)){
+                    echo 'Faili üleslaadimine oli edukas';	
+                } else {
+                    echo 'Faili üleslaadimine ebaõnnestus';
                 }
-                echo '<br>';
+            } else {
+                echo 'Faili ei letud üles!';	
             }
-
-            
         }
-        fclose($minu_csv);
         ?>
+        <form action="" method="post" enctype="multipart/form-data">
+            <input type="file" name="minu_fail"><br>
+            <input type="submit" value="Lae üles!">
+        </form>
         </div>
 
-
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     </body>
 </html>
