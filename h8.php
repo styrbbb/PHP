@@ -76,18 +76,18 @@
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="?a=suvi">Suvi</a></li>
-                <li><a class="dropdown-item" href="?a=sugis">Sügis</a></li>
-                <li><a class="dropdown-item" href="?a=talv">Talv</a></li>
-                <li><a class="dropdown-item" href="?a=kevad">Kevad</a></li>
+                <li><a class="dropdown-item" href="?aa=suvi">Suvi</a></li>
+                <li><a class="dropdown-item" href="?aa=sugis">Sügis</a></li>
+                <li><a class="dropdown-item" href="?aa=talv">Talv</a></li>
+                <li><a class="dropdown-item" href="?aa=kevad">Kevad</a></li>
             </ul>
         </div>
 
         <?php
         // PHP logic to display the selected image
-        if (isset($_GET['season'])) {
-            $season = $_GET['season'];
-            switch ($season) {
+        if (isset($_GET['aa'])) {
+            $aa = $_GET['aa'];
+            switch ($aa) {
                 case 'talv':
                     $image = 'talv.jpg';
                     break;
@@ -104,7 +104,7 @@
                     $image = 'default.jpg'; // Default image if season not recognized
                     break;
             }
-            echo '<img src="' . $image . '" alt="' . ucfirst($season) . '" class="img-fluid">';
+            echo '<img src="' . $image . '" alt="' . ucfirst($aa) . '" class="img-fluid">';
         }
 
         ?>
