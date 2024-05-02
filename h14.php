@@ -23,6 +23,7 @@
         */
 
         ?>
+        <!-- 
         <form method="post" action="">
             <select name="suva">
                 <option value="">Vali pilt</option>
@@ -37,7 +38,36 @@
                 ?>
             </select>
             <input type="submit" value="Vaata">
-        </form>
+        </form> 
+    
+    -->
+
+        <?php
+        function random($folder_path = null)
+        {
+
+            if (!empty($folder_path)) { // if the folder path is not empty
+                $files_array = scandir($folder_path);
+                $count = count($files_array);
+
+                if ($count > 2) { // if has files in the folder
+                    $minus = $count - 1;
+                    $random = rand(2, $minus);
+                    $random_file = $files_array[$random]; // random file, result will be for example: image.png
+                    $file_link = $folder_path . "/" . $random_file; // file link, result will be for example: your-folder-path/image.png
+                    return '<a href="' . $file_link . '" target="_blank" title="' . $random_file . '"><img src="' . $file_link . '" alt="' . $random_file . '"></a>';
+                } else {
+                    return "The folder is empty!";
+                }
+            } else {
+                return "Please enter folder path!";
+            }
+
+        }
+        ?>
+        <?php
+        echo random("suva"); // display random image!
+        ?>
     </div>
 
 
