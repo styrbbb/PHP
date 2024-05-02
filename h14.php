@@ -13,7 +13,7 @@
 
 <body>
     <div class="container">
-        <h1>Töö kataloogidega</h1>
+        <h1>Töö pildifailidega</h1>
         <h1 class="mb-4"></h1>
         <h2></h2>
         <?php
@@ -23,6 +23,21 @@
         */
 
         ?>
+        <form method="post" action="">
+            <select name="pildid">
+                <option value="">Vali pilt</option>
+                <?php
+                $kataloog = 'pildid';
+                $asukoht = opendir($kataloog);
+                while ($rida = readdir($asukoht)) {
+                    if ($rida != '.' && $rida != '..') {
+                        echo "<option value='$rida'>$rida</option>\n";
+                    }
+                }
+                ?>
+            </select>
+            <input type="submit" value="Vaata">
+        </form>
     </div>
 
 
