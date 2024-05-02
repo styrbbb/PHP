@@ -24,10 +24,10 @@
 
         ?>
         <form method="post" action="">
-            <select name="pildid">
+            <select name="suva">
                 <option value="">Vali pilt</option>
                 <?php
-                $kataloog = 'pildid';
+                $kataloog = 'suva';
                 $asukoht = opendir($kataloog);
                 while ($rida = readdir($asukoht)) {
                     if ($rida != '.' && $rida != '..') {
