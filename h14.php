@@ -2,7 +2,7 @@
 <html lang="et">
 
 <head>
-    <title>Harjutus 13</title>
+    <title>Harjutus 14</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -23,24 +23,6 @@
         */
 
         ?>
-        <!-- 
-        <form method="post" action="">
-            <select name="suva">
-                <option value="">Vali pilt</option>
-                <?php
-                $kataloog = 'suva';
-                $asukoht = opendir($kataloog);
-                while ($rida = readdir($asukoht)) {
-                    if ($rida != '.' && $rida != '..') {
-                        echo "<option value='$rida'>$rida</option>\n";
-                    }
-                }
-                ?>
-            </select>
-            <input type="submit" value="Vaata">
-        </form> 
-    
-    -->
 
         <?php
         function random($folder_path = null)
