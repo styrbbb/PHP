@@ -15,7 +15,7 @@
     <div class="container">
         <h1>Töö pildifailidega</h1>
         <h1 class="mb-4"></h1>
-        <h2></h2>
+        <h2>Suvaline pilt</h2>
         <?php
         /*  Harjutus 14
             Thorian Perk
@@ -28,7 +28,7 @@
             <select name="suva">
                 <option value="">Vali pilt</option>
                 <?php
-                $kataloog = 'suva';
+                $kataloog = 'h14p';
                 $asukoht = opendir($kataloog);
                 while ($rida = readdir($asukoht)) {
                     if ($rida != '.' && $rida != '..') {
@@ -66,7 +66,7 @@
         }
         ?>
         <?php
-        echo random("suva"); // display random image!
+        echo random("h14p"); // display random image!
         ?>
     </div>
 
