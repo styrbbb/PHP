@@ -22,25 +22,26 @@
             30.04.2024
         */
 
-        $kataloog = 'pildid';
-        $asukoht = opendir($kataloog);
 
-        if (!empty($_FILES['minu_fail']['name'])) {
+
+        if(!empty($_FILES['minu_fail']['name'])) {
             $sinu_faili_nimi = $_FILES['minu_fail']['name'];
-            $ajutine_fail = $_FILES['minu_fail']['tmp_name'];
-
-            $faili_suurus = $_FILES['minu_fail']['size'];	//faili suurus
-            $max_suurus = 1048576;							//seame lubatud failisuuruse piiri
-        
-            if ($faili_suurus <= $max_suurus) {
+            $ajutine_fail= $_FILES['minu_fail']['tmp_name'];
+            
+            $faili_suurus = $_FILES['minu_fail']['size'];
+            $max_suurus = 1048576;
+            
+            $faili_tyyp = $_FILES['minu_fail']['type'];
+            if($faili_suurus <= $max_suurus && ($faili_tyyp == 'image/jpeg' || $faili_tyyp == 'image/png')) {
                 $kataloog = 'failid';
-                if (move_uploaded_file($ajutine_fail, $kataloog . '/' . $sinu_faili_nimi)) {
-                    echo 'Faili üleslaadimine oli edukas';
+                $faili_koht = $kataloog.'/'.$sinu_faili_nimi;	//kontrollitava faili asukoht ja nimi
+                
+                if(!file_exists($faili_koht) && move_uploaded_file($ajutine_fail, $kataloog.'/'.$sinu_faili_nimi)){
+                    echo 'Faili üleslaadimine oli edukas'."</br>";
+                    echo '<img src="'.$faili_koht.'" alt="Üleslaaditud pilt">';	
                 } else {
                     echo 'Faili üleslaadimine ebaõnnestus';
                 }
-            } else {
-                echo 'Liiga suur fail (üle 2MB)!';
             }
         }
 
