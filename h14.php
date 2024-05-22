@@ -2,7 +2,7 @@
 <html lang="et">
 
 <head>
-    <title>Harjutus 13</title>
+    <title>Harjutus 14</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -19,7 +19,7 @@
         <?php
         /*  Harjutus 14
             Thorian Perk
-            02.05.2024
+            22.05.2024
         */
 
             $kataloog = 'h14p';
