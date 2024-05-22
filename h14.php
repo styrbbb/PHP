@@ -22,27 +22,9 @@
             02.05.2024
         */
 
-        ?>
-        <!-- 
-        <form method="post" action="">
-            <select name="suva">
-                <option value="">Vali pilt</option>
-                <?php
-                $kataloog = 'h14p';
-                $asukoht = opendir($kataloog);
-                while ($rida = readdir($asukoht)) {
-                    if ($rida != '.' && $rida != '..') {
-                        echo "<option value='$rida'>$rida</option>\n";
-                    }
-                }
-                ?>
-            </select>
-            <input type="submit" value="Vaata">
-        </form> 
-    
-    -->
+            $kataloog = 'h14p';
+            $asukoht = opendir($kataloog);
 
-        <?php
         function random($folder_path = null)
         {
 
@@ -55,7 +37,7 @@
                     $random = rand(2, $minus);
                     $random_file = $files_array[$random]; // random file, result will be for example: image.png
                     $file_link = $folder_path . "/" . $random_file; // file link, result will be for example: your-folder-path/image.png
-                    return '<a href="' . $file_link . '" target="_blank" title="' . $random_file . '"><img src="' . $file_link . '" alt="' . $random_file . '"></a>';
+                    return '<a href="' . $file_link . '" target="_blank" title="' . $random_file . '"><img src="' . $file_link . '" alt="' . $random_file . '"width="1280" height="800"></a>';
                 } else {
                     return "The folder is empty!";
                 }
