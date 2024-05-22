@@ -50,6 +50,14 @@
         <?php
         echo random("h14p"); // display random image!
         ?>
+        <h1 class="mb-4"></h1>
+        <h2>Pisipildid</h2>
+        <?php 
+        $kataloog = 'h14k';
+        $asukoht=opendir($kataloog);
+        
+        ?>
+
     </div>
 
 
