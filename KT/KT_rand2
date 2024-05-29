@@ -15,7 +15,7 @@
                     $random = rand(2, $minus);
                     $random_file = $files_array[$random]; //Genereerib suvaline faili.
                     $file_link = $folder_path . "/" . $random_file;
-                    return '<a href="' . $file_link . '" target="_blank" title="' . $random_file . '"><img src="' . $file_link . '" alt="' . $random_file . '"width="400" height="220"></a>';
+                    return '<a href="' . $file_link . '" target="_blank" title="' . $random_file . '"><img src="' . $file_link . '" alt="' . $random_file . '"width="450" height="250"></a>';
                 } else {
                     return "The folder is empty!";
                 }
