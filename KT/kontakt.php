@@ -1,22 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap KT</title>
+    <title>PHP KT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-	<style>
-		.sinunimi{
-		background-image: url("https://picsum.photos/id/311/1310/260");
-		color: #fff;
-		text-align: center;
-	  }
-		#canvas-for-googlemap .text-marker{}.map-generator{max-width: 100%; max-height: 100%; background: none; 
-	  
-	  }
-</style>
 </head>
 <body>
     <div class="container-{breakpoint}">
@@ -26,29 +17,29 @@
           </div>
       </div>
     </div>
-  <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary" data-bs-theme="dark">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="minuMenyy">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Avaleht</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tooted.html">Tooted</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="teenused.html">Teenused</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="kontakt.html">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container">
+        <a class="navbar-brand" href="#">thorian.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="minuMenyy">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.php">Avaleht</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pood.php">Pood</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin.php">Admin</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
   <div class="container-{breakpoint}">
     <h1 class="display-5 text-center">Kontakt</h1>
     <div style="overflow:hidden;max-width:100%;width:2000px;height:300px;">

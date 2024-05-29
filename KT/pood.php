@@ -23,29 +23,29 @@
           </div>
       </div>
     </div>
-  <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary" data-bs-theme="dark">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="minuMenyy">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Avaleht</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page"  href="pood.html">Pood</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="teenused.html">Teenused</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="kontakt.html">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container">
+        <a class="navbar-brand" href="#">thorian.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="minuMenyy">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.php">Avaleht</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Pood</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kontakt.php">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin.php">Admin</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
