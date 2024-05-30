@@ -6,18 +6,7 @@
     <title>PHP KT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-            .thumbnail {
-          position: relative;
-      }
-
-      .caption {
-          position: absolute;
-          top: 20%;
-          left: 5%;
-          width: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -46,19 +35,19 @@
         <div class="container">
           <div class="row justify-content-center p-5 mb-4">
               <div class="thumbnail col-md-6">
-                <?php include 'KT_rand1'; ?>
+                <?php include 'KT_rand'; ?>
                 <img class="img-fluid" src="random1" alt="">
                 <div class="caption">
                     <p class="text-light fw-bold">parim pakkumine</p>
                     <p class="text-light fw-bold fs-2">osta 1 saad 1</p>
                     <p class="text-light fw-bold">The best classic dress is on sale at Coro</p>
                 </div>
-                <?php echo random1("KT_rand_img"); ?>
+                <?php echo random1("banner"); ?>
             </div>
               <div class="col-md-6">
-                <?php include 'KT_rand2'; ?>
+                <?php include 'KT_rand'; ?>
                 <img class="img-fluid" src="random2" alt="">
-                <?php echo random2("KT_rand_img"); ?>
+                <?php echo random2("banner"); ?>
               </div>
           </div>
       </div>
