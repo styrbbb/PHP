@@ -54,8 +54,11 @@ body {
 }
 
 footer {
-    padding: 3px;
+    padding: 60px;
     background-color: lightgrey;
     color:black;
     align-items: start;
+    height: 150px;
+    width: 100%;
+    
   }

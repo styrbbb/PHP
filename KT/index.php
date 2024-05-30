@@ -48,7 +48,7 @@
           }
         ?>
         <div class="container justify-content-center">
-          <div class="row p-5 mb-3">
+          <div class="row p-5.5 mb-3 mt-3">
               <div class="thumbnail col-md-6">
                 <?php include 'KT_rand1'; ?>
                 <img class="img-fluid" src="random1" alt="">
@@ -74,149 +74,86 @@
           </div>
       </div>
       <section class="py-5">
+      <h1 class="text-center fw-bold">Parimad pakkumised</h1>
             <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-start">
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="card-body p-4">
-                                <div class="text-center">
+                                <div class="text-start">
                                     <h5 class="fw-bolder">Sinu toode</h5>
-                                    20.00€
+                                    <h5 class="fw-bolder text-success">20.00€</h5>
                                 </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Vaata valikuid</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Lorem ipsum pipsum</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <span class="text-muted text-decoration-line-through">$20.00</span>
-                                    $18.00
+                                <div class="text-start">
+                                    <h5 class="fw-bolder">Sinu toode</h5>
+                                    <h5 class="fw-bolder text-success">20.00€</h5>
                                 </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Lorem picsum</h5>
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
+                                <div class="text-start">
+                                    <h5 class="fw-bolder">Sinu toode</h5>
+                                    <h5 class="fw-bolder text-success">20.00€</h5>
                                 </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Lorem naine</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $40.00
+                                <div class="text-start">
+                                    <h5 class="fw-bolder">Sinu toode</h5>
+                                    <h5 class="fw-bolder text-success">20.00€</h5>
                                 </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Lorem picsum</h5>
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
+                                <div class="text-start">
+                                    <h5 class="fw-bolder">Sinu toode</h5>
+                                    <h5 class="fw-bolder text-success">20.00€</h5>
                                 </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Lorem arvuti</h5>
-                                    $120.00 - $280.00
+                                <div class="text-start">
+                                    <h5 class="fw-bolder">Sinu toode</h5>
+                                    <h5 class="fw-bolder text-success">20.00€</h5>
                                 </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Vaata valikuid</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Lorem ipsum wipsum</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$20.00</span>
-                                    $18.00
+                                <div class="text-start">
+                                    <h5 class="fw-bolder">Sinu toode</h5>
+                                    <h5 class="fw-bolder text-success">20.00€</h5>
                                 </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <!-- Product image-->
-                            <!-- Product details-->
                             <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Lorem ipsum</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    $40.00
+                                <div class="text-start">
+                                    <h5 class="fw-bolder">Sinu toode</h5>
+                                    <h5 class="fw-bolder text-success">20.00€</h5>
                                 </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
                             </div>
                         </div>
                     </div>
@@ -226,9 +163,8 @@
       <footer>
         <div class="container">
           <div class="row">
-            <div class="col-md-3 mx-auto mt-3">
-              <h3 class="text-start">Thorian</h3>
-
+            <div class="col-md-6 mx-auto">
+              <h5 class="text-start">Thorian</h5>
             </div>
           </div>
         </div>
