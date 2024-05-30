@@ -4,55 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP KT</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
     <div class="container">
-      <a class="navbar-brand" href="#">thorian.com</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand text-dark" href="#">thorian.com</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#minuMenyy" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="minuMenyy">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.php">Avaleht</a>
+                <a class="nav-link text-dark fw-bold" aria-current="page" href="index.php">Avaleht</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.php?leht=pood">Pood</a>
+                <a class="nav-link text-dark fw-bold" href="index.php?leht=pood">Pood</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.php?leht=kontakt">Kontakt</a>
+                <a class="nav-link text-dark fw-bold" href="index.php?leht=kontakt">Kontakt</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.php?leht=login">Admin</a>
+                <a class="nav-link text-dark fw-bold" href="index.php?leht=login">Admin</a>
+              </li>
+              <li>
+                <a class="nav-link text-dark" href="index.php?leht=ostukorv"><i class="fa-solid fa-bag-shopping"></i></a>
               </li>
             </ul>
           </div>
         </nav>
-        <div class="container">
-          <div class="row justify-content-center p-5 mb-4">
-              <div class="thumbnail col-md-6">
-                <?php include 'KT_rand'; ?>
-                <img class="img-fluid" src="random1" alt="">
-                <div class="caption">
-                    <p class="text-light fw-bold">parim pakkumine</p>
-                    <p class="text-light fw-bold fs-2">osta 1 saad 1</p>
-                    <p class="text-light fw-bold">The best classic dress is on sale at Coro</p>
-                </div>
-                <?php echo random1("banner"); ?>
-            </div>
-              <div class="col-md-6">
-                <?php include 'KT_rand'; ?>
-                <img class="img-fluid" src="random2" alt="">
-                <?php echo random2("banner"); ?>
-              </div>
-          </div>
-      </div>
-
-      <?php
+        <?php
           if(!empty($_GET['leht'])){
               $leht = htmlspecialchars($_GET['leht']);
               if(is_file($leht.'.php')){
@@ -64,9 +47,195 @@
             
           }
         ?>
+        <div class="container justify-content-center">
+          <div class="row p-5 mb-3">
+              <div class="thumbnail col-md-6">
+                <?php include 'KT_rand1'; ?>
+                <img class="img-fluid" src="random1" alt="">
+                <div class="caption">
+                    <p class="text-light fw-bold">parim pakkumine</p>
+                    <p class="text-light fw-bold fs-2">osta 1 saad 1</p>
+                    <p class="text-light fw-bold">The best classic dress is on sale at Coro</p>
+                    <button type="button" class="btn btn-outline-light rounded-0">Vaata lähemalt</button>
+                </div>
+                <?php echo random1("banner"); ?>
+            </div>
+              <div class="thumbnail col-md-6">
+                <?php include 'KT_rand2'; ?>
+                <img class="img-fluid" src="random2" alt="">
+                <div class="caption2">
+                    <p class="text-light fw-bold">kevad/suvi</p>
+                    <p class="text-light fw-bold fs-2">kõik rohelised</p>
+                    <p class="text-light fw-bold">20% sootsamalt</p>
+                    <button type="button" class="btn btn-outline-light rounded-0">Tutvu lähemalt</button>
+                </div>
+                <?php echo random2("banner"); ?>
+              </div>
+          </div>
+      </div>
+      <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Sinu toode</h5>
+                                    20.00€
+                                </div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Vaata valikuid</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Lorem ipsum pipsum</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    $18.00
+                                </div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Lorem picsum</h5>
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Lorem naine</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    $40.00
+                                </div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Lorem picsum</h5>
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Lorem arvuti</h5>
+                                    $120.00 - $280.00
+                                </div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Vaata valikuid</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Lorem ipsum wipsum</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    $18.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Lorem ipsum</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $40.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Lisa ostukorvi</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 mx-auto mt-3">
+              <h3 class="text-start">Thorian</h3>
+
+            </div>
+          </div>
+        </div>
+      </footer>
       
   
-
+    <script src="https://kit.fontawesome.com/56055df5c8.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
