@@ -22,7 +22,7 @@
             22.05.2024
         */
 
-            $kataloog = 'h14p';
+            $kataloog = 'h14.1';
             $asukoht = opendir($kataloog);
 
         function random($folder_path = null)
@@ -50,7 +50,7 @@
         ?>
         <?php
         //Prindib pildid suvalises järjekorras.
-        echo random("h14p");
+        echo random("h14.2");
         ?>
         <h1 class="mb-4"></h1>
         <h2>Pisipildid</h2>
