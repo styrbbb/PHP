@@ -6,6 +6,18 @@
     <title>PHP KT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+            .thumbnail {
+          position: relative;
+      }
+
+      .caption {
+          position: absolute;
+          top: 20%;
+          left: 5%;
+          width: 100%;
+      }
+    </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -17,38 +29,52 @@
           <div class="collapse navbar-collapse" id="minuMenyy">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Avaleht</a>
+                <a class="nav-link" aria-current="page" href="index.php">Avaleht</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="pood.html">Pood</a>
+                <a class="nav-link" href="index.php?leht=pood">Pood</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="kontakt.html">Kontakt</a>
+                <a class="nav-link" href="index.php?leht=kontakt">Kontakt</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="admin.html">Admin</a>
+                <a class="nav-link" href="index.php?leht=login">Admin</a>
               </li>
             </ul>
           </div>
         </nav>
         <div class="container">
-          <div class="row justify-content-evenly p-5 mb-4">
-              <div class="col-md-6">
+          <div class="row justify-content-center p-5 mb-4">
+              <div class="thumbnail col-md-6">
                 <?php include 'KT_rand1'; ?>
                 <img class="img-fluid" src="random1" alt="">
+                <div class="caption">
+                    <p class="text-light fw-bold">parim pakkumine</p>
+                    <p class="text-light fw-bold fs-2">osta 1 saad 1</p>
+                    <p class="text-light fw-bold">The best classic dress is on sale at Coro</p>
+                </div>
                 <?php echo random1("KT_rand_img"); ?>
             </div>
-            <div class="col-md-6">
+              <div class="col-md-6">
                 <?php include 'KT_rand2'; ?>
                 <img class="img-fluid" src="random2" alt="">
                 <?php echo random2("KT_rand_img"); ?>
-            </div>
+              </div>
           </div>
-        </div>
+      </div>
 
-
-
-    </div>
+      <?php
+          if(!empty($_GET['leht'])){
+              $leht = htmlspecialchars($_GET['leht']);
+              if(is_file($leht.'.php')){
+                  include($leht.'.php');
+              } else {
+                  echo 'Valitud lehte ei eksisteeri!';
+              }
+          } else {
+            
+          }
+        ?>
       
   
 

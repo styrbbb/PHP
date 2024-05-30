@@ -8,13 +8,6 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container-{breakpoint}">
-      <div class="p-4 bg-body-tertiary sinunimi">
-          <div class="container py-2">
-              <h1 class="display-5 text-light text-start">thorian.com</h1>
-          </div>
-      </div>
-    </div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container">
         <a class="navbar-brand" href="#">thorian.com</a>

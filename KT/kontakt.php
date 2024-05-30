@@ -10,36 +10,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
 <body>
-    <div class="container-{breakpoint}">
-      <div class="p-4 bg-body-tertiary sinunimi">
-          <div class="container py-2">
-              <h1 class="display-3 text-light text-start">thorian.com</h1>
-          </div>
-      </div>
-    </div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container">
-        <a class="navbar-brand" href="#">thorian.com</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="minuMenyy">
-                <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.php">Avaleht</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pood.php">Pood</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Kontakt</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="admin.php">Admin</a>
-                </li>
-                </ul>
-            </div>
-        </nav>
   <div class="container-{breakpoint}">
     <h1 class="display-5 text-center">Kontakt</h1>
     <div style="overflow:hidden;max-width:100%;width:2000px;height:300px;">
