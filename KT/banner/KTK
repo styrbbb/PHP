@@ -1,9 +1,9 @@
 <?php
 $pildid = array(
-    '/banner/b4.jpg',
-    '/banner/b10.jng',
-    '/banner/b17.jpg',
-    '/banner/b18.jpg',
+    'b4.jpg',
+    'b10.jng',
+    'b17.jpg',
+    'b18.jpg',
     // Add more image paths as needed
 );
 
@@ -16,5 +16,8 @@ $randomImage = $pildid[$randomKey];
 // Set the maximum width and height for the image
 $maxWidth = 550;
 $maxHeight = 250;
+
+// Output the random image with width and height limits
+echo '<img src="' . $randomImage . '" alt="Random Image" width="' . $maxWidth . '" height="' . $maxHeight . '">';
 
 ?>
