@@ -1,0 +1,64 @@
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 100%;
+    line-height: 1;
+}
+
+.caption2 {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 100%;
+    line-height: 1;
+}
+
+nav {
+    background-color: lightgray;
+    padding: 10px 20px;
+    
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+.container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+footer {
+    padding: 60px;
+    background-color: lightgrey;
+    color:black;
+    align-items: start;
+    height: 150px;
+    width: 100%;
+    
+  }

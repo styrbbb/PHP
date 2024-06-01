@@ -110,7 +110,7 @@
 
         }
 
-        echo "<img height='100' src='$pilt'>";
+        echo "<img height='100' src='$pilt'>"; //Läheb ära kui kuvab ruudu või ristküliku pildi.
         echo "<br>";
         echo "<br>";
         echo "<br>";

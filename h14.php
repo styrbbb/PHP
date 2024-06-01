@@ -15,29 +15,30 @@
     <div class="container">
         <h1>Töö pildifailidega</h1>
         <h1 class="mb-4"></h1>
-        <h2></h2>
+        <h2>Suvaline pilt</h2>
         <?php
         /*  Harjutus 14
             Thorian Perk
-            02.05.2024
+            22.05.2024
         */
 
-        ?>
+        $kataloog = 'h14.1';
+        $asukoht = opendir($kataloog);
 
-        <?php
         function random($folder_path = null)
         {
-
-            if (!empty($folder_path)) { // if the folder path is not empty
+            //Kontrollib kas kaust on tühi.
+            if (!empty($folder_path)) {
                 $files_array = scandir($folder_path);
                 $count = count($files_array);
 
-                if ($count > 2) { // if has files in the folder
+                //Kontrollib kas kasutas on faile.
+                if ($count > 2) {
                     $minus = $count - 1;
                     $random = rand(2, $minus);
-                    $random_file = $files_array[$random]; // random file, result will be for example: image.png
-                    $file_link = $folder_path . "/" . $random_file; // file link, result will be for example: your-folder-path/image.png
-                    return '<a href="' . $file_link . '" target="_blank" title="' . $random_file . '"><img src="' . $file_link . '" alt="' . $random_file . '"></a>';
+                    $random_file = $files_array[$random]; //Genereerib suvaline faili.
+                    $file_link = $folder_path . "/" . $random_file;
+                    return '<a href="' . $file_link . '" target="_blank" title="' . $random_file . '"><img src="' . $file_link . '" alt="' . $random_file . '"width="1280" height="800"></a>';
                 } else {
                     return "The folder is empty!";
                 }
@@ -48,8 +49,53 @@
         }
         ?>
         <?php
-        echo random("suva"); // display random image!
+        //Prindib pildid suvalises järjekorras.
+        echo random("h14.2");
         ?>
+        <h1 class="mb-4"></h1>
+        <h2>Pisipildid</h2>
+        <?php
+
+        $kataloog = 'h14k';
+        $asukoht = opendir($kataloog);
+
+        function kuvaKolmesVeerus($folder_path = null)
+        {
+            //Kontrollib kas kaust on tühi.
+            if (!empty($folder_path)) {
+                $files_array = scandir($folder_path);
+                $count = count($files_array);
+                //Kontrollib kas kasutas on faile.
+                if ($count > 2) {
+                    echo '<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">';
+                    $column_count = 0;
+                    foreach ($files_array as $file) {
+                        if ($file != '.' && $file != '..') {
+                            $file_link = $folder_path . "/" . $file;
+                            //Määrab piltidele suuruse ja polsterduse ning pisipiltide suuruse muutmiseks muuda '" width="100%"></a></div>' väärtust koodi tükki lõpus.
+                            echo '<div style="width: 33%; padding: 10px; box-sizing: border-box;"><a href="' . $file_link . '" target="_blank" title="' . $file . '"><img src="' . $file_link . '" alt="' . $file . '" width="100%"></a></div>';
+                            $column_count++;
+                            //Lisab uue rea iga kolme veeruga.
+                            if ($column_count % 3 == 0) {
+                                echo '<div style="flex-basis: 100%; height: 0;"></div>';
+                            }
+                        }
+                    }
+                    echo '</div>';
+                } else {
+                    return "The folder is empty!";
+                }
+            } else {
+                return "Please enter folder path!";
+            }
+        }
+        ?>
+
+        <?php
+        //Prindib pildid kolmes veerus
+        echo kuvaKolmesVeerus("h14k");
+        ?>
+
     </div>
 
 
