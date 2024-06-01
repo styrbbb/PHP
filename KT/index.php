@@ -60,7 +60,8 @@
                     <p class="text-light fw-bold">parim pakkumine</p>
                     <p class="text-light fw-bold fs-2">osta 1 saad 1</p>
                     <p class="text-light fw-bold">The best classic dress is on sale at Coro</p>
-                    <button type="button" class="btn btn-outline-light rounded-0">Vaata lähemalt</button>
+                    <a href="index.php?leht=pood" class="btn btn-outline-light rounded-0" role="button">Vaata
+                        lähemalt</a>
                 </div>
                 <?php echo '<img src="' . $randomImage . '" alt="" width="' . $maxWidth . '" height="' . $maxHeight . '">'; ?>
             </div>
@@ -71,7 +72,8 @@
                     <p class="text-light fw-bold">kevad/suvi</p>
                     <p class="text-light fw-bold fs-2">kõik rohelised</p>
                     <p class="text-light fw-bold">20% sootsamalt</p>
-                    <button type="button" class="btn btn-outline-light rounded-0">Tutvu lähemalt</button>
+                    <a href="index.php?leht=pood" class="btn btn-outline-light rounded-0" role="button">Tutvu
+                        lähemalt</a>
                 </div>
                 <?php echo '<img src="' . $randomImage . '" alt="" width="' . $maxWidth . '" height="' . $maxHeight . '">'; ?>
             </div>
