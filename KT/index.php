@@ -54,7 +54,7 @@
     <div class="container justify-content-center">
         <div class="row p-5.5 mb-3 mt-3">
             <div class="thumbnail col-md-6">
-                <?php include 'KT_rand1'; ?>
+                <?php include 'random.php'; ?>
                 <img class="img-fluid" src="random1" alt="">
                 <div class="caption">
                     <p class="text-light fw-bold">parim pakkumine</p>
@@ -65,7 +65,7 @@
                 <?php echo '<img src="' . $randomImage . '" alt="" width="' . $maxWidth . '" height="' . $maxHeight . '">'; ?>
             </div>
             <div class="thumbnail col-md-6">
-                <?php include 'KT_rand2'; ?>
+                <?php include 'random.php'; ?>
                 <img class="img-fluid" src="random2" alt="">
                 <div class="caption2">
                     <p class="text-light fw-bold">kevad/suvi</p>
@@ -73,7 +73,7 @@
                     <p class="text-light fw-bold">20% sootsamalt</p>
                     <button type="button" class="btn btn-outline-light rounded-0">Tutvu lähemalt</button>
                 </div>
-                <?php echo random2("banner"); ?>
+                <?php echo '<img src="' . $randomImage . '" alt="" width="' . $maxWidth . '" height="' . $maxHeight . '">'; ?>
             </div>
         </div>
     </div>
