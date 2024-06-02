@@ -85,6 +85,7 @@
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-start">
                 <div class="col mb-5">
                     <div class="card h-100">
+                        <img class="card-img-top img-fluid" src="tooted/f1.jpg" alt="">
                         <div class="card-body p-4">
                             <div class="text-start">
                                 <h5 class="fw-bolder">Sinu toode</h5>
@@ -95,6 +96,7 @@
                 </div>
                 <div class="col mb-5">
                     <div class="card h-100">
+                        <img class="card-img-top" src="tooted/f2.jpg" alt="">
                         <div class="card-body p-4">
                             <div class="text-start">
                                 <h5 class="fw-bolder">Sinu toode</h5>
@@ -105,6 +107,7 @@
                 </div>
                 <div class="col mb-5">
                     <div class="card h-100">
+                        <img class="card-img-top" src="tooted/f3.jpg" alt="">
                         <div class="card-body p-4">
                             <div class="text-start">
                                 <h5 class="fw-bolder">Sinu toode</h5>
@@ -115,6 +118,7 @@
                 </div>
                 <div class="col mb-5">
                     <div class="card h-100">
+                        <img class="card-img-top" src="tooted/f4.jpg" alt="">
                         <div class="card-body p-4">
                             <div class="text-start">
                                 <h5 class="fw-bolder">Sinu toode</h5>
@@ -125,6 +129,7 @@
                 </div>
                 <div class="col mb-5">
                     <div class="card h-100">
+                        <img class="card-img-top" src="tooted/f5.jpg" alt="">
                         <div class="card-body p-4">
                             <div class="text-start">
                                 <h5 class="fw-bolder">Sinu toode</h5>
@@ -135,6 +140,7 @@
                 </div>
                 <div class="col mb-5">
                     <div class="card h-100">
+                        <img class="card-img-top" src="tooted/f6.jpg" alt="">
                         <div class="card-body p-4">
                             <div class="text-start">
                                 <h5 class="fw-bolder">Sinu toode</h5>
@@ -145,6 +151,7 @@
                 </div>
                 <div class="col mb-5">
                     <div class="card h-100">
+                        <img class="card-img-top" src="tooted/f7.jpg" alt="">
                         <div class="card-body p-4">
                             <div class="text-start">
                                 <h5 class="fw-bolder">Sinu toode</h5>
@@ -155,6 +162,7 @@
                 </div>
                 <div class="col mb-5">
                     <div class="card h-100">
+                        <img class="card-img-top" src="tooted/f8.jpg" alt="">
                         <div class="card-body p-4">
                             <div class="text-start">
                                 <h5 class="fw-bolder">Sinu toode</h5>
