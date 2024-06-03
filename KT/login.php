@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['pass'];
 
     if (empty($username) || empty($password)) {
-        $error = "Username and password are required.";
+        $error = "Sisestus puudub!";
     } else {
         // Dummy credentials for example purposes
         $validUsername = "admin";
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: admin.php');
             exit;
         } else {
-            $error = "Username and password invalid.";
+            $error = "Login või parool on vale.";
         }
     }
 }
@@ -56,15 +56,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </header>
 
 <div class="container mt-4">
-    <?php if (!empty($error)): ?>
-        <div class="alert alert-danger"><?php echo $error; ?></div>
-    <?php endif; ?>
     <form action="" method="post">
         Login: <input type="text" id="login" name="login"><br>
         Password: <input type="password" id="pass" name="pass"><br>
         <input class="mt-2" type="submit" value="Logi sisse">
     </form>
 </div>
+<div class="container mt-4">
+    <?php if (!empty($error)): ?>
+        <div class="alert alert-danger"><?php echo $error; ?></div><br>
+    <?php endif; ?>
+</div>
+
 
 <!-- <div class="container mt-4">
     <h2>Admin Login</h2>
