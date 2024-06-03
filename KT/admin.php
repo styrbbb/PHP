@@ -156,9 +156,20 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       </tbody>
     </table>
   </div>
-
-
-  <div class="container mt-4">
+  <div class="container">
+    <form>
+      <div class="mb-3">
+        <label for="nimetus" class="form-label">Toote nimi</label>
+        <input type="text" class="form-control" name="nimetus" id="nimetus">
+      </div>
+      <div class="mb-3">
+        <label for="hind" class="form-label">Hind</label>
+        <input type="number" class="form-control" name="hind" id="hind">
+      </div>
+      <button type="submit" class="btn btn-primary">Lisa</button>
+    </form>
+  </div>
+  <div class="container mt-4 mb-4">
     <form action="logout.php" method="post">
       <input type="submit" value="Logi välja" name="logout">
     </form>
