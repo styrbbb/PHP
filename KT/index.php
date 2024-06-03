@@ -13,27 +13,27 @@
 <body>
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand text-dark" href="#">thorian.com</a>
+            <a class="navbar-brand text-dark" href="index.php">thorian.com</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#minuMenyy"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="minuMenyy">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                    <li class="nav-item px-2">
                         <a class="nav-link text-dark fw-bold" aria-current="page" href="index.php">Avaleht</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item px-2">
                         <a class="nav-link text-dark fw-bold" href="index.php?leht=pood">Pood</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item px-2">
                         <a class="nav-link text-dark fw-bold" href="index.php?leht=kontakt">Kontakt</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item px-2">
                         <a class="nav-link text-dark fw-bold" href="index.php?leht=login">Admin</a>
                     </li>
                     <li>
-                        <a class="nav-link text-dark" href="index.php?leht=ostukorv"><i
+                        <a class="nav-link px-2 text-dark" href="index.php?leht=ostukorv"><i
                                 class="fa-solid fa-bag-shopping"></i></a>
                     </li>
                 </ul>
@@ -52,7 +52,7 @@
     }
     ?>
     <div class="container justify-content-center">
-        <div class="row p-5.5 mb-3 mt-3">
+        <div class="row p-5.5 mb-3 mt-5">
             <div class="thumbnail col-md-6">
                 <?php include 'random.php'; ?>
                 <img class="img-fluid" src="random1" alt="">

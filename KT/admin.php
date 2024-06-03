@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+  header('Location: login.php');
+  exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="et">
 
@@ -10,10 +19,20 @@
 </head>
 
 <body>
+  <header class="py-2">
+    <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-dark">
+        <h1 class="display-5">Admin</h1>
+        <p class="lead text-dark-50 mb-0">admin panel</p>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <form action="logout.php" method="post">
+      <input type="submit" value="Logi välja" name="logout">
+    </form>
 
-
-
-
+  </div>
 
 
 

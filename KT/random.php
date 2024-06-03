@@ -14,7 +14,7 @@ $randomKey = array_rand($pildid, 1);
 $randomImage = $pildid[$randomKey];
 
 // Set the maximum width and height for the image
-$maxWidth = 550;
+$maxWidth = 530;
 $maxHeight = 280;
 
 ?>
