@@ -6,6 +6,36 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
   exit;
 }
 ?>
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
+  $delete_id = $_POST['delete_id'];
+  $file = 'tooted/tooted.csv';
+
+  // Read all data from the CSV file
+  $rows = array_map('str_getcsv', file($file));
+
+  // Find the index of the row to delete
+  $header = array_shift($rows); // Separate header
+  foreach ($rows as $index => $row) {
+    if ($row[0] == $delete_id) {
+      unset($rows[$index]);
+      break;
+    }
+  }
+
+  // Write the data back to the CSV file
+  $file_handle = fopen($file, 'w');
+  fputcsv($file_handle, $header); // Write the header back
+  foreach ($rows as $row) {
+    fputcsv($file_handle, $row);
+  }
+  fclose($file_handle);
+
+  // Redirect to the same page to reflect the changes
+  header("Location: " . $_SERVER['PHP_SELF']);
+  exit();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="et">
@@ -41,118 +71,31 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td><img src="tooted/f1.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td><img src="tooted/f2.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td><img src="tooted/f3.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td><img src="tooted/f4.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td><img src="tooted/f5.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td><img src="tooted/f6.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">7</th>
-          <td><img src="tooted/f7.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">8</th>
-          <td><img src="tooted/f8.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">9</th>
-          <td><img src="tooted/f9.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">10</th>
-          <td><img src="tooted/f10.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">11</th>
-          <td><img src="tooted/f11.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">12</th>
-          <td><img src="tooted/f12.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">13</th>
-          <td><img src="tooted/f13.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">14</th>
-          <td><img src="tooted/f14.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">15</th>
-          <td><img src="tooted/f15.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
-        <tr>
-          <th scope="row">16</th>
-          <td><img src="tooted/f16.jpg" alt="" class="img-fluid img-thumbnail" width="75" height="75"></td>
-          <td>Sinu toode</td>
-          <td>20.00€</td>
-          <td><button type="button" class="btn btn-outline-danger">Kustuta</button></td>
-        </tr>
+        <?php
+        //Avab CSV faili
+        if (($handle = fopen("tooted/tooted.csv", "r")) !== FALSE) {
+          // Skip the first row (headers)
+          fgetcsv($handle, 1000, ",");
+
+          // Loop through the CSV rows
+          while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { ?>
+            <tr>
+              <?php echo "<th scope='row'>{$data[0]}</th>"; ?>
+              <?php echo "<td><img src='{$data[1]}' alt='' class='img-fluid img-thumbnail' width='75' height='75'></td>"; ?>
+              <?php echo "<td>{$data[2]}</td>"; ?>
+              <?php echo "<td>{$data[3]}</td>"; ?>
+              <?php echo "<td>
+                            <form method='POST' style='display:inline-block;'>
+                                <input type='hidden' name='delete_id' value='{$data[0]}'>
+                                <button type='submit' class='btn btn-outline-danger'>Kustuta</button>
+                            </form>
+                          </td>"; ?>
+            </tr>
+          <?php }
+          //Sulgeb ja salvestab muudatused csv failis
+          fclose($handle);
+        }
+        ?>
       </tbody>
     </table>
   </div>

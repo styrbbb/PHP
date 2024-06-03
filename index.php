@@ -13,28 +13,29 @@
 
 <body>
     <div class="container">
-    <h1 class="text-primary fs-1 fw-bold mx-auto p-2"> PHP ülesannete kataloog</h1>
-    <h4 class="text-danger mx-auto p-2"> BAKA MITAI! </h4>
-    <a class="mx-auto p-2" href="?page=h1">PHP harjutus 1</a><br>
-    <a class="mx-auto p-2" href="?page=h2">PHP harjutus 2</a><br>
-    <a class="mx-auto p-2" href="?page=h3">PHP harjutus 3</a><br>
-    <a class="mx-auto p-2" href="?page=h4">PHP harjutus 4</a><br>
-    <a class="mx-auto p-2" href="?page=h5">PHP harjutus 5</a><br>
-    <a class="mx-auto p-2" href="?page=h6">PHP harjutus 6</a><br>
-    <a class="mx-auto p-2" href="?page=h7">PHP harjutus 7</a><br>
-    <a class="mx-auto p-2" href="?page=h8">PHP harjutus 8</a><br>
-    <a class="mx-auto p-2" href="?page=h9">PHP harjutus 9</a><br>
-    <a class="mx-auto p-2" href="?page=h10">PHP harjutus 10</a><br>
-    <a class="mx-auto p-2" href="?page=h11">PHP harjutus 11 (tühi) </a><br>
-    <a class="mx-auto p-2" href="?page=h12">PHP harjutus 12</a><br>
-    <a class="mx-auto p-2" href="?page=h13">PHP harjutus 13</a><br>
-    <a class="mx-auto p-2" href="?page=h14">PHP harjutus 14</a><br>
+        <h1 class="text-primary fs-1 fw-bold mx-auto p-2"> PHP ülesannete kataloog</h1>
+        <h4 class="text-danger mx-auto p-2"> BAKA MITAI! </h4>
+        <a class="mx-auto p-2" href="?page=h1">PHP harjutus 1</a><br>
+        <a class="mx-auto p-2" href="?page=h2">PHP harjutus 2</a><br>
+        <a class="mx-auto p-2" href="?page=h3">PHP harjutus 3</a><br>
+        <a class="mx-auto p-2" href="?page=h4">PHP harjutus 4</a><br>
+        <a class="mx-auto p-2" href="?page=h5">PHP harjutus 5</a><br>
+        <a class="mx-auto p-2" href="?page=h6">PHP harjutus 6</a><br>
+        <a class="mx-auto p-2" href="?page=h7">PHP harjutus 7</a><br>
+        <a class="mx-auto p-2" href="?page=h8">PHP harjutus 8</a><br>
+        <a class="mx-auto p-2" href="?page=h9">PHP harjutus 9</a><br>
+        <a class="mx-auto p-2" href="?page=h10">PHP harjutus 10</a><br>
+        <a class="mx-auto p-2" href="?page=h11">PHP harjutus 11 (tühi) </a><br>
+        <a class="mx-auto p-2" href="?page=h12">PHP harjutus 12</a><br>
+        <a class="mx-auto p-2" href="?page=h13">PHP harjutus 13</a><br>
+        <a class="mx-auto p-2" href="?page=h14">PHP harjutus 14</a><br>
+        <a class="mx-auto p-2" href="?page=KT">PHP Kontrolltöö</a><br>
 
-    <?php
+        <?php
         // Kontrolli, kas linkidele vajutati
-        if(isset($_GET['page'])) {
+        if (isset($_GET['page'])) {
             // Määra sihtfaili asukoht vastavalt linkile
-            switch($_GET['page']) {
+            switch ($_GET['page']) {
                 case 'h1':
                     $target_file = 'h1.php';
                     break;
@@ -77,17 +78,20 @@
                 case 'h14':
                     $target_file = 'h14.php';
                     break;
+                case 'KT':
+                    $target_file = 'KT/index.php';
+                    break;
                 // Lisage rohkem juhtumeid vastavalt oma failide arvule
                 default:
                     $target_file = 'index.php'; // Vaikimisi suunatakse tagasi avalehele
                     break;
             }
-            
+
             // Suuna kasutaja sihtfaili
             header("Location: $target_file");
             exit();
         }
-    ?>
+        ?>
 
 
 
@@ -99,4 +103,5 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
